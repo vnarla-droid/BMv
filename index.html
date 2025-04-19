@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BMW Cars E-commerce Store">
+    <title>BMW Cars E-commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>BMW Cars Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('products')">Products</a></li>
+                <li><a href="#" onclick="showSection('cart')">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <h2>Welcome to BMW Cars Store</h2>
+        <div class="featured-cars">
+            <div class="featured-car">
+                <img src="https://images.unsplash.com/photo-1607853554439-0069ec0f29b6?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BMW M3">
+                <h3>BMW M3</h3>
+                <p>A high-performance sedan with a 3.0L inline-6 engine, delivering 473 horsepower.</p>
+                <p>Starting Price: $70,000</p>
+            </div>
+            <div class="featured-car">
+                <img src="https://images.unsplash.com/photo-1635089917414-6da790da8479?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BMW X5">
+                <h3>BMW X5</h3>
+                <p>A luxury SUV with advanced tech and a spacious interior, powered by a 3.0L engine.</p>
+                <p>Starting Price: $60,000</p>
+            </div>
+            <div class="featured-car">
+                <img src="https://images.unsplash.com/photo-1640633642370-0190673f383b?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BMW i8">
+                <h3>BMW i8</h3>
+                <p>A hybrid sports car with futuristic design and a 1.5L engine plus electric motor.</p>
+                <p>Starting Price: $140,000</p>
+            </div>
+            <div class="featured-car">
+                <img src="https://images.unsplash.com/photo-1603189661342-e45f1374f890?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BMW M5 Competition">
+                <h3>BMW M5 Competition</h3>
+                <p>A top-tier sedan with a 4.4L V8 engine, producing 617 horsepower for ultimate performance.</p>
+                <p>Starting Price: $111,000</p>
+            </div>
+            <div class="featured-car">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/2025-bmw-3-series-109-66562dcbe3d2b.jpg" alt="BMW 3 Series M Sport">
+                <h3>BMW 3 Series M Sport</h3>
+                <p>A sporty sedan with M Sport enhancements, featuring a 2.0L engine with 255 horsepower.</p>
+                <p>Starting Price: $45,000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <h2>Available BMW Models</h2>
+        <div class="product-container">
+            <div class="product" data-id="1">
+                <img src="https://images.unsplash.com/photo-1607853554439-0069ec0f29b6?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BMW M3">
+                <h3>BMW M3</h3>
+                <p>Price: $70,000</p>
+                <button onclick="addToCart(1, 'BMW M3', 70000)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2">
+                <img src="https://images.unsplash.com/photo-1635089917414-6da790da8479?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BMW X5">
+                <h3>BMW X5</h3>
+                <p>Price: $60,000</p>
+                <button onclick="addToCart(2, 'BMW X5', 60000)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3">
+                <img src="https://images.unsplash.com/photo-1640633642370-0190673f383b?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BMW i8">
+                <h3>BMW i8</h3>
+                <p>Price: $140,000</p>
+                <button onclick="addToCart(3, 'BMW i8', 140000)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="4">
+                <img src="https://images.unsplash.com/photo-1603189661342-e45f1374f890?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BMW M5 Competition">
+                <h3>BMW M5 Competition</h3>
+                <p>Price: $111,000</p>
+                <button onclick="addToCart(4, 'BMW M5 Competition', 111000)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="5">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/2025-bmw-3-series-109-66562dcbe3d2b.jpg" alt="BMW 3 Series M Sport">
+                <h3>BMW 3 Series M Sport</h3>
+                <p>Price: $45,000</p>
+                <button onclick="addToCart(5, 'BMW 3 Series M Sport', 45000)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="section">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0</span></p>
+        
+        <h3>Customer Details</h3>
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Shipping Address</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <h3>Payment Method</h3>
+            <div class="form-group">
+                <label><input type="radio" name="payment" value="credit" required> Credit Card</label>
+                <div id="credit-card-details" class="payment-details hidden">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                    <label for="card-expiry">Expiry Date</label>
+                    <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY">
+                    <label for="card-cvc">CVC</label>
+                    <input type="text" id="card-cvc" name="card-cvc" placeholder="123">
+                </div>
+            </div>
+            <div class="form-group">
+                <label><input type="radio" name="payment" value="paypal"> PayPal</label>
+            </div>
+            <div class="form-group">
+                <label><input type="radio" name="payment" value="bank"> Bank Transfer</label>
+            </div>
+            <button type="submit">Checkout</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 BMW Cars Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
